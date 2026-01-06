@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <components>
+    <comp ref="U1">
+      <value>MCU</value>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+    </comp>
+  </components>
+
+  <nets>
+    <net name="RESET">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net name="SCL">
+      <node ref="U1" pin="10"/>
+    </net>
+    <net name="SDA">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net name="VCC">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net name="GND">
+      <node ref="U1" pin="2"/>
+    </net>
+  </nets>
+</export>

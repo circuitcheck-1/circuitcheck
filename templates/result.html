@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Report – CircuitCheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        CircuitCheck <span class="version">v1.0</span>
+    </div>
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+</header>
+
+<main class="main">
+
+    <div class="card">
+        <h1>Design Analysis Report</h1>
+        <p class="subtitle">
+            Below are the issues detected from your schematic netlist.
+        </p>
+
+        {% if results %}
+            {% for issue in results %}
+                <div class="issue {{ issue.level }}">
+                    <div class="issue-badge">{{ issue.level }}</div>
+                    <h3>{{ issue.title }}</h3>
+                    <p>{{ issue.description }}</p>
+                    <p class="fix"><strong>Recommended fix:</strong> {{ issue.fix }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="issue SUCCESS">
+                <div class="issue-badge">SUCCESS</div>
+                <h3>No issues detected</h3>
+                <p>Your design passed all basic schematic checks.</p>
+            </div>
+        {% endif %}
+
+        <div class="actions">
+            <a class="primary-link" href="/static/report.pdf" download>
+                Download PDF Report
+            </a>
+            <a class="secondary-link" href="/">
+                Analyze another design
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>CircuitCheck • Automated schematic checks</p>
+</footer>
+
+</body>
+</html>

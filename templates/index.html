@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CircuitCheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">CircuitCheck <span class="version">v1.0</span></div>
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+</header>
+
+<main class="main">
+
+    <div class="card">
+        <h1>Detect PCB Design Issues Before Fabrication</h1>
+        <p class="subtitle">
+            Automated schematic analysis for common hardware design mistakes.
+        </p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label class="upload-label">Upload KiCad netlist (.net / .xml)</label>
+            <input type="file" name="netlist" required>
+            <button type="submit">Run Design Check</button>
+        </form>
+
+        <p class="hint">No login required • Free basic checks</p>
+    </div>
+
+    <div class="how-it-works">
+        <h2>How it works</h2>
+        <ol>
+            <li>Export netlist from KiCad</li>
+            <li>Upload it to CircuitCheck</li>
+            <li>Rules analyze schematic risks</li>
+            <li>Download a PDF report</li>
+        </ol>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>CircuitCheck • Version 1.0 • Schematic-level analysis</p>
+</footer>
+
+</body>
+</html>

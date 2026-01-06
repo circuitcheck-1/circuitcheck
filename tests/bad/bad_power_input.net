@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <components>
+    <comp ref="U1"><value>MCU</value></comp>
+    <comp ref="C1"><value>0.1uF</value></comp>
+  </components>
+
+  <nets>
+    <net name="POWER_IN">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net name="GND">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net name="VCC">
+      <node ref="U1" pin="3"/>
+    </net>
+  </nets>
+</export>
