@@ -3,7 +3,7 @@ import os
 from checker import analyze_netlist
 from report_generator import generate_pdf_report
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
 UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -38,6 +38,4 @@ def about():
 
 if __name__ == "__main__":
     print("Starting CircuitCheck v1.0")
-app.run(host="0.0.0.0", port=5000)
-
-
+    app.run(host="0.0.0.0", port=5000)

@@ -21,7 +21,7 @@ def run_rules(design):
         issues.append({
             "level": "ERROR",
             "title": "Missing I2C pull-up resistors",
-            "description": "I2C bus requires pull-up resistors on SDA and SCL lines.",
+            "description": "I2C bus requires pull-up resistors on SDA and SCL.",
             "fix": "Add 4.7kΩ–10kΩ pull-up resistors to VCC."
         })
 

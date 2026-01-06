@@ -9,9 +9,7 @@
 <body>
 
 <header class="topbar">
-    <div class="logo">
-        CircuitCheck <span class="version">v1.0</span>
-    </div>
+    <div class="logo">CircuitCheck <span class="version">v1.0</span></div>
     <nav class="nav">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -19,40 +17,30 @@
 </header>
 
 <main class="main">
-
     <div class="card">
         <h1>Design Analysis Report</h1>
-        <p class="subtitle">
-            Below are the issues detected from your schematic netlist.
-        </p>
 
         {% if results %}
             {% for issue in results %}
                 <div class="issue {{ issue.level }}">
-                    <div class="issue-badge">{{ issue.level }}</div>
-                    <h3>{{ issue.title }}</h3>
+                    <h3>{{ issue.level }} – {{ issue.title }}</h3>
                     <p>{{ issue.description }}</p>
-                    <p class="fix"><strong>Recommended fix:</strong> {{ issue.fix }}</p>
+                    <p><strong>Fix:</strong> {{ issue.fix }}</p>
                 </div>
             {% endfor %}
         {% else %}
             <div class="issue SUCCESS">
-                <div class="issue-badge">SUCCESS</div>
-                <h3>No issues detected</h3>
-                <p>Your design passed all basic schematic checks.</p>
+                <h3>No issues detected 🎉</h3>
+                <p>Your design passed all checks.</p>
             </div>
         {% endif %}
 
-        <div class="actions">
-            <a class="primary-link" href="/static/report.pdf" download>
-                Download PDF Report
-            </a>
-            <a class="secondary-link" href="/">
-                Analyze another design
-            </a>
-        </div>
-    </div>
+        <a class="primary-link" href="/static/report.pdf" download>
+            Download PDF Report
+        </a><br><br>
 
+        <a class="secondary-link" href="/">Analyze another design</a>
+    </div>
 </main>
 
 <footer class="footer">
