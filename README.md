@@ -1,4 +1,4 @@
-# CircuitCheck 
+# CircuitCheck ⚡
 
 CircuitCheck is a schematic-level PCB design analysis web application that
 detects common hardware design mistakes **before fabrication**.
@@ -8,7 +8,7 @@ netlists and reporting potential design risks with clear recommendations.
 
 ---
 
-##  Features
+## 🚀 Features
 
 - Upload KiCad schematic netlists (`.net` / `.xml`)
 - Automated rule-based schematic checks
@@ -19,7 +19,7 @@ netlists and reporting potential design risks with clear recommendations.
 
 ---
 
-##  Checks Implemented (v1.0)
+## 🛠️ Checks Implemented (v1.0)
 
 - Floating RESET pin detection
 - Missing I²C pull-up resistors
@@ -28,7 +28,7 @@ netlists and reporting potential design risks with clear recommendations.
 
 ---
 
-##  Supported Input
+## 📂 Supported Input
 
 - **KiCad schematic netlist**
   - `.net`
@@ -37,7 +37,7 @@ netlists and reporting potential design risks with clear recommendations.
 
 ---
 
-## ▶ Run Locally
+## ▶️ Run Locally
 
 ```bash
 pip install flask reportlab
